@@ -1,0 +1,5 @@
+name: optics
+params:
+  - name: min_samples
+    type: range
+    bounds: [2, 100]

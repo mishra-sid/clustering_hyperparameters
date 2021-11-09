@@ -1,0 +1,10 @@
+name: test
+cache_dir: ${root_dir}/data/generic
+datasets:
+- name: mfeat-fourier
+  loader: openml
+  metadata:
+    id: 14
+    num_instances: 2000
+    num_features: 76
+    num_clusters: 10

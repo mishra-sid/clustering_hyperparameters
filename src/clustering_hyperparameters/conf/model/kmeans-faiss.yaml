@@ -1,0 +1,11 @@
+name: kmeans-faiss
+params:
+  - name: k
+    type: fixed
+    value: ${suite.datasets.${dataset_index}.metadata.num_clusters}
+  - name: niter
+    type: range
+    bounds: [ 1, 100]
+  - name: nredo
+    type: range
+    bounds: [ 1, 5]

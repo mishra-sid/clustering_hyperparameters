@@ -1,0 +1,14 @@
+name: dbscan
+params:
+  - name: metric
+    type: fixed
+    value_type: str
+    value: cosine
+  - name: eps
+    type: range
+    value_type: float
+    bounds: [0.001, 0.999]
+  - name: min_samples
+    type: range
+    value_type: int
+    bounds: [2, 100]

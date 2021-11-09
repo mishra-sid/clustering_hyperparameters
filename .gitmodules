@@ -1,0 +1,9 @@
+[submodule "lib/pytorch-utils"]
+	path = lib/pytorch-utils
+	url = https://gitlab.com/boratko/pytorch-utils.git
+[submodule "lib/scc"]
+	path = lib/scc
+	url = https://github.com/nmonath/scc
+[submodule "lib/grinch"]
+	path = lib/grinch
+	url = https://github.com/iesl/grinch

@@ -1,0 +1,14 @@
+name: hac
+params:
+  - name: criterion
+    type: fixed
+    value_type: str
+    value: maxclust
+  - name: t
+    type: fixed
+    value_type: int
+    value: ${suite.datasets.${dataset_index}.metadata.num_clusters}
+  - name: method
+    type: choice
+    value_type: str  
+    values: ['single', 'complete', 'average', 'centroid', 'median', 'ward', 'weighted']

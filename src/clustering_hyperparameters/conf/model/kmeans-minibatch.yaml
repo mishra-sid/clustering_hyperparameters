@@ -1,0 +1,43 @@
+name: kmeans-minibatch
+params:
+  - name: random_state
+    type: fixed
+    value_type: int
+    value: 0
+  - name: batch_size
+    type: range
+    value_type: int
+    bounds: [1, 1024]
+    log_scale: True
+  - name: n_clusters
+    type: fixed
+    value_type: int
+    value: ${suite.datasets.${dataset_index}.metadata.num_clusters}
+  - name: max_iter
+    type: range
+    value_type: int
+    bounds: [1, 1000]
+  - name: init
+    type: fixed
+    value_type: str
+    value: "k-means++"
+  - name: tol
+    type: range
+    value_type: float
+    bounds: [0.0, 1.0]
+  - name: n_init
+    type: range
+    value_type: int
+    bounds: [1, 100]
+  - name: init_size
+    type: range
+    value_type: int
+    bounds: ['${suite.datasets.${dataset_index}.metadata.num_clusters}', '${suite.datasets.${dataset_index}.metadata.num_instances}']
+  - name: reassignment_ratio
+    type: range
+    value_type: float
+    bounds: [0.0, 1.0]
+  - name: max_no_improvement
+    type: range
+    value_type: int
+    bounds: [2, 100]

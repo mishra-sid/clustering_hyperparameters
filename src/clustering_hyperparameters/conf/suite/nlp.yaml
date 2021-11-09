@@ -1,0 +1,103 @@
+name: nlp
+cache_dir: ${root_dir}/data/nlp
+datasets:
+- name: AGNews-paraphrase-mpnet
+  loader: torchtext
+  metadata:
+    tag: AG_NEWS
+    split: test
+    encoder: sentence-transformer
+    encoder_model: paraphrase-mpnet-base-v2
+    num_instances: 7600
+    num_features: 768   
+    num_clusters: 4
+
+- name: AGNews-stsb-distilroberta
+  loader: torchtext
+  metadata:
+    tag: AG_NEWS
+    split: test
+    encoder: sentence-transformer
+    encoder_model: stsb-distilroberta-base-v2
+    num_instances: 7600
+    num_features: 768   
+    num_clusters: 4
+
+- name: AGNews-glove
+  loader: torchtext
+  metadata:
+    tag: AG_NEWS
+    split: test
+    encoder: sentence-transformer
+    encoder_model: average_word_embeddings_glove.6B.300d
+    num_instances: 7600
+    num_features: 300   
+    num_clusters: 4
+
+- name: DBpedia-paraphrase-mpnet
+  loader: torchtext
+  metadata:
+    tag: DBpedia
+    split: test
+    encoder: sentence-transformer
+    encoder_model: paraphrase-mpnet-base-v2
+    num_instances: 70000
+    num_features: 768   
+    num_clusters: 14
+
+- name: DBpedia-stsb-distilroberta
+  loader: torchtext
+  metadata:
+    tag: DBpedia
+    split: test
+    encoder: sentence-transformer
+    encoder_model: stsb-distilroberta-base-v2
+    num_instances: 70000
+    num_features: 384   
+    num_clusters: 14
+
+- name: DBpedia-glove
+  loader: torchtext
+  metadata:
+    tag: DBpedia
+    split: test
+    encoder: sentence-transformer
+    encoder_model: average_word_embeddings_glove.6B.300d
+    num_instances: 70000
+    num_features: 300   
+    num_clusters: 14
+
+- name: YahooAnswers-paraphrase-mpnet
+  loader: torchtext
+  metadata:
+    tag: YahooAnswers
+    split: test
+    encoder: sentence-transformer
+    encoder_model: paraphrase-mpnet-base-v2
+    num_instances: 60000
+    num_features: 768   
+    num_clusters: 10
+
+
+- name: YahooAnswers-stsb-distilroberta
+  loader: torchtext
+  metadata:
+    tag: YahooAnswers
+    split: test
+    encoder: sentence-transformer
+    encoder_model: stsb-distilroberta-base-v2
+    num_instances: 60000
+    num_features: 768   
+    num_clusters: 10
+
+- name: YahooAnswers-glove
+  loader: torchtext
+  metadata:
+    tag: YahooAnswers
+    split: test
+    encoder: sentence-transformer
+    encoder_model: average_word_embeddings_glove.6B.300d
+    num_instances: 60000
+    num_features: 300   
+    num_clusters: 10
+

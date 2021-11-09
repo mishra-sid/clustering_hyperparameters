@@ -1,0 +1,21 @@
+name: kmeans
+params:
+  - name: random_state
+    type: fixed
+    value: 0
+  - name: n_clusters
+    type: fixed
+    value: 7
+    bounds: [1, 6000]
+  - name: max_iter
+    type: range
+    bounds: [1, 10000]
+  - name: init
+    type: choice
+    values: ["k-means++", "random"]
+  - name: n_init
+    type: range
+    bounds: [1, 100]
+  - name: tol
+    type: range
+    bounds: [0.0, 1.0]

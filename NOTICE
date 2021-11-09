@@ -1,0 +1,4 @@
+Clustering Hyperparameters
+Copyright [2021] Siddhartha Mishra
+
+This product includes software developed by Ray Tune(https://docs.ray.io/en/latest/tune/index.html) , Facebook Hydra (https://hydra.cc/) and Facebook Ax (https://ax.dev/). 

@@ -1,0 +1,7 @@
+version: "3"
+services:
+   clustering-benchmark:
+      platform: linux/amd64
+      build: .
+      ports:
+      - "10001:10001"

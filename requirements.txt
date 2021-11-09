@@ -1,0 +1,17 @@
+scipy=1.6.2
+scikit-learn=0.24.2
+pytorch=1.9.0
+torchtext=0.10.0
+torchvision=0.10.0
+botorch=0.5.0
+networkx==2.6.2
+ax-platform==0.2.1
+hydra-core==1.1.0
+ray[tune]==1.5.2
+higra==0.6.4
+openml==0.12.2
+faiss-cpu==1.7.1
+hdbscan==0.8.26
+registrable==0.0.4
+sentence-transformers==2.0.0
+fanova==2.0.19

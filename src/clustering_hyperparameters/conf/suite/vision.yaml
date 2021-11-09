@@ -1,0 +1,63 @@
+name: vision
+cache_dir: ${root_dir}/data/vision
+datasets:
+- name: optdigits
+  loader: openml
+  metadata:
+    id: 28
+    num_instances: 5620
+    num_features: 64
+    num_clusters: 10
+- name: pendigits
+  loader: openml
+  metadata:
+    id: 32
+    num_instances: 10992
+    num_features: 16
+    num_clusters: 10
+- name: mnist784
+  loader: openml
+  metadata:
+    id: 554
+    num_instances: 70000
+    num_features: 784
+    num_clusters: 10
+- name: texture
+  loader: openml
+  metadata:
+    id: 40499
+    num_instances: 5500
+    num_features: 40
+    num_clusters: 11
+- name: Fashion-MNIST
+  loader: openml
+  metadata:
+    id: 40996
+    num_instances: 70000
+    num_features: 784
+    num_clusters: 10
+- name: CIFAR10
+  loader: openml
+  metadata:
+    id: 40927
+    num_instances: 60000
+    num_features: 3072
+    num_clusters: 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+defaults:
+  # Suite of datasets to run the benchmark
+  - suite: generic
+  # Clustering Model to evaluate
+  - model: kmeans-minibatch
+
+# Index of dataset to run the current instance of evaluation
+dataset_index: 0
+
+# If enabled, fetches the dataset before evaluation  
+fetch_suite: True
+
+# If enabled, L2 normalizes the dataset
+normalize: False
+
+# Root directory 
+root_dir: clustering_hyperparameters  
+
+# Optimization parameters
+optim:
+  # allocated compute per trial
+  compute: 
+    cpu: 12
+    gpu: 0
+    max_concurrent: 5
+  # select which external evaluation metric to run the benchmark 
+  eval_metric:
+    name: adjusted_rand_score
+    best_value: 1.0
+    minimize: false # False => Maximize
+  # Episode index 
+  run_index: 0
+
+  # Resume from last interrupted execution
+  resume: False  
+
+  # Attach existing trials from random evals
+  attach_from_existing_trials: False
+  num_trials_to_attach: 10
+
+  # Number of random and bayesian trials to run
+  num_random_trials: 10
+  num_bayes_trials: 10
+
+  # Number of episodes to run 
+  num_episodes: 10
+    
