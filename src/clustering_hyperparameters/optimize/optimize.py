@@ -123,8 +123,6 @@ def optimize(config):
             max_concurrency=config["optim"]["compute"]["max_concurrent"]
         ),
         local_dir=config["root_dir"] + "/ray/" + suite_name,
-        max_failures=3,
-        resume=config["optim"]["resume"],
         resources_per_trial={"cpu": config["optim"]["compute"]["cpu"], "gpu": config["optim"]["compute"]["gpu"]}
     )
 
@@ -133,5 +131,4 @@ def optimize(config):
     trials_df['compute_time'] = [ compute_time_col[trial_index] for trial_index in trials_df.trial_index ]
 
     trials_df.to_csv(output_dir + "/" + exp_name + ".csv", encoding='utf-8', index=False)
-    
-    
+

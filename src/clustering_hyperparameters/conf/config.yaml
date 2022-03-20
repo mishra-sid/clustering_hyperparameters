@@ -20,28 +20,28 @@ root_dir: clustering_hyperparameters
 optim:
   # allocated compute per trial
   compute: 
-    cpu: 12
+    cpu: 8
     gpu: 0
-    max_concurrent: 5
+    max_concurrent: 10
+  
   # select which external evaluation metric to run the benchmark 
   eval_metric:
     name: adjusted_rand_score
     best_value: 1.0
     minimize: false # False => Maximize
+  
   # Episode index 
   run_index: 0
 
-  # Resume from last interrupted execution
-  resume: False  
-
   # Attach existing trials from random evals
   attach_from_existing_trials: False
-  num_trials_to_attach: 10
+  num_trials_to_attach: 0
+
 
   # Number of random and bayesian trials to run
-  num_random_trials: 10
+  num_random_trials: 40
   num_bayes_trials: 10
 
   # Number of episodes to run 
-  num_episodes: 10
+  num_episodes: 5
     

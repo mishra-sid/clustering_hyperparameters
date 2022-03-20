@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 set -exu
-threads=${1:-12}
-num_cpus=${2:-60}
-mem=${3:-60000}
+threads=${1:-8}
+num_cpus=${2:-80}
+mem=${3:-100000}
 num_datasets=$4
 num_rounds=$5
 
