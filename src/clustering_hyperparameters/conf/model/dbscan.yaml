@@ -1,4 +1,5 @@
 name: dbscan
+base_model: dbscan
 params:
   - name: metric
     type: fixed

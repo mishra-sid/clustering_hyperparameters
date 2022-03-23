@@ -1,4 +1,5 @@
 name: kmeans-faiss
+base_model: kmeans-faiss
 params:
   - name: k
     type: fixed

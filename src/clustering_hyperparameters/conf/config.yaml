@@ -11,18 +11,18 @@ dataset_index: 0
 fetch_suite: True
 
 # If enabled, L2 normalizes the dataset
-normalize: False
+normalize: True
 
 # Root directory 
-root_dir: clustering_hyperparameters  
+root_dir: /mnt/nfs/scratch1/siddharthami/iesl/clustering_hyperparameters 
 
 # Optimization parameters
 optim:
   # allocated compute per trial
   compute: 
-    cpu: 8
+    cpu: 12
     gpu: 0
-    max_concurrent: 10
+    max_concurrent: 5
   
   # select which external evaluation metric to run the benchmark 
   eval_metric:
@@ -39,9 +39,9 @@ optim:
 
 
   # Number of random and bayesian trials to run
-  num_random_trials: 40
-  num_bayes_trials: 10
+  num_random_trials: 50
+  num_bayes_trials: 0
 
   # Number of episodes to run 
   num_episodes: 5
-    
+

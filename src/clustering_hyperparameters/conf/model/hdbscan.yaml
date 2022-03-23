@@ -1,4 +1,5 @@
 name: hdbscan
+base_model: hdbscan
 params:
   - name: cluster_selection_epsilon
     type: range

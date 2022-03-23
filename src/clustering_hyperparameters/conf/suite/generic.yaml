@@ -1,395 +1,435 @@
-name: generic
 cache_dir: ${root_dir}/data/generic
 datasets:
-- name: kr-vs-kp
-  loader: openml
+- loader: openml
   metadata:
     id: 3
-    num_instances: 3196
-    num_features: 36
+    max_num_clusters: 57
     num_clusters: 2
-- name: letter
-  loader: openml
+    num_features: 36
+    num_instances: 3196
+  name: kr-vs-kp
+- loader: openml
   metadata:
     id: 6
-    num_instances: 20000
-    num_features: 16
+    max_num_clusters: 142
     num_clusters: 26
-- name: balance-scale
-  loader: openml
+    num_features: 16
+    num_instances: 20000
+  name: letter
+- loader: openml
   metadata:
     id: 11
-    num_instances: 625
-    num_features: 4
+    max_num_clusters: 25
     num_clusters: 3
-- name: mfeat-factors
-  loader: openml
+    num_features: 4
+    num_instances: 625
+  name: balance-scale
+- loader: openml
   metadata:
     id: 12
-    num_instances: 2000
-    num_features: 216
+    max_num_clusters: 45
     num_clusters: 10
-- name: mfeat-fourier
-  loader: openml
+    num_features: 216
+    num_instances: 2000
+  name: mfeat-factors
+- loader: openml
   metadata:
     id: 14
-    num_instances: 2000
-    num_features: 76
+    max_num_clusters: 45
     num_clusters: 10
-- name: mfeat-karhunen
-  loader: openml
+    num_features: 76
+    num_instances: 2000
+  name: mfeat-fourier
+- loader: openml
   metadata:
     id: 16
-    num_instances: 2000
-    num_features: 64
+    max_num_clusters: 45
     num_clusters: 10
-- name: mfeat-morphological
-  loader: openml
+    num_features: 64
+    num_instances: 2000
+  name: mfeat-karhunen
+- loader: openml
   metadata:
     id: 18
-    num_instances: 2000
-    num_features: 6
+    max_num_clusters: 45
     num_clusters: 10
-- name: mfeat-zernike
-  loader: openml
+    num_features: 6
+    num_instances: 2000
+  name: mfeat-morphological
+- loader: openml
   metadata:
     id: 22
-    num_instances: 2000
-    num_features: 47
+    max_num_clusters: 45
     num_clusters: 10
-- name: cmc
-  loader: openml
+    num_features: 47
+    num_instances: 2000
+  name: mfeat-zernike
+- loader: openml
   metadata:
     id: 23
-    num_instances: 1473
-    num_features: 9
+    max_num_clusters: 39
     num_clusters: 3
-- name: credit-g
-  loader: openml
+    num_features: 9
+    num_instances: 1473
+  name: cmc
+- loader: openml
   metadata:
     id: 31
-    num_instances: 1000
-    num_features: 20
+    max_num_clusters: 32
     num_clusters: 2
-- name: diabetes
-  loader: openml
+    num_features: 20
+    num_instances: 1000
+  name: credit-g
+- loader: openml
   metadata:
     id: 37
-    num_instances: 768
-    num_features: 8
+    max_num_clusters: 28
     num_clusters: 2
-- name: spambase
-  loader: openml
+    num_features: 8
+    num_instances: 768
+  name: diabetes
+- loader: openml
   metadata:
     id: 44
-    num_instances: 4601
-    num_features: 57
+    max_num_clusters: 68
     num_clusters: 2
-- name: splice
-  loader: openml
+    num_features: 57
+    num_instances: 4601
+  name: spambase
+- loader: openml
   metadata:
     id: 46
-    num_instances: 3190
-    num_features: 60
+    max_num_clusters: 57
     num_clusters: 3
-- name: tic-tac-toe
-  loader: openml
+    num_features: 60
+    num_instances: 3190
+  name: splice
+- loader: openml
   metadata:
     id: 50
-    num_instances: 958
-    num_features: 9
+    max_num_clusters: 31
     num_clusters: 2
-- name: vehicle
-  loader: openml
+    num_features: 9
+    num_instances: 958
+  name: tic-tac-toe
+- loader: openml
   metadata:
     id: 54
-    num_instances: 846
-    num_features: 18
+    max_num_clusters: 30
     num_clusters: 4
-- name: electricity
-  loader: openml
+    num_features: 18
+    num_instances: 846
+  name: vehicle
+- loader: openml
   metadata:
     id: 151
-    num_instances: 45312
-    num_features: 8
+    max_num_clusters: 213
     num_clusters: 2
-- name: satimage
-  loader: openml
+    num_features: 8
+    num_instances: 45312
+  name: electricity
+- loader: openml
   metadata:
     id: 182
-    num_instances: 6430
-    num_features: 36
+    max_num_clusters: 81
     num_clusters: 6
-- name: vowel
-  loader: openml
+    num_features: 36
+    num_instances: 6430
+  name: satimage
+- loader: openml
   metadata:
     id: 307
-    num_instances: 990
-    num_features: 12
+    max_num_clusters: 32
     num_clusters: 11
-- name: isolet
-  loader: openml
+    num_features: 12
+    num_instances: 990
+  name: vowel
+- loader: openml
   metadata:
     id: 300
-    num_instances: 7797
-    num_features: 617
+    max_num_clusters: 89
     num_clusters: 26
-- name: analcatdata_authorship
-  loader: openml
+    num_features: 617
+    num_instances: 7797
+  name: isolet
+- loader: openml
   metadata:
     id: 458
-    num_instances: 841
-    num_features: 70
+    max_num_clusters: 29
     num_clusters: 4
-- name: analcatdata_dmft
-  loader: openml
+    num_features: 70
+    num_instances: 841
+  name: analcatdata_authorship
+- loader: openml
   metadata:
     id: 469
-    num_instances: 797
-    num_features: 4
+    max_num_clusters: 29
     num_clusters: 6
-- name: pc4
-  loader: openml
+    num_features: 4
+    num_instances: 797
+  name: analcatdata_dmft
+- loader: openml
   metadata:
     id: 1049
-    num_instances: 1458
-    num_features: 37
+    max_num_clusters: 39
     num_clusters: 2
-- name: pc3
-  loader: openml
+    num_features: 37
+    num_instances: 1458
+  name: pc4
+- loader: openml
   metadata:
     id: 1050
-    num_instances: 1563
-    num_features: 37
+    max_num_clusters: 40
     num_clusters: 2
-- name: kc2
-  loader: openml
+    num_features: 37
+    num_instances: 1563
+  name: pc3
+- loader: openml
   metadata:
     id: 1063
-    num_instances: 522
-    num_features: 21
+    max_num_clusters: 23
     num_clusters: 2
-- name: kc1
-  loader: openml
+    num_features: 21
+    num_instances: 522
+  name: kc2
+- loader: openml
   metadata:
     id: 1067
-    num_instances: 2109
-    num_features: 21
+    max_num_clusters: 46
     num_clusters: 2
-- name: pc1
-  loader: openml
+    num_features: 21
+    num_instances: 2109
+  name: kc1
+- loader: openml
   metadata:
     id: 1068
-    num_instances: 1109
-    num_features: 21
+    max_num_clusters: 34
     num_clusters: 2
-- name: Bioresponse
-  loader: openml
+    num_features: 21
+    num_instances: 1109
+  name: pc1
+- loader: openml
   metadata:
     id: 4134
-    num_instances: 3751
-    num_features: 1776
+    max_num_clusters: 62
     num_clusters: 2
-- name: wdbc
-  loader: openml
+    num_features: 1776
+    num_instances: 3751
+  name: Bioresponse
+- loader: openml
   metadata:
     id: 1510
-    num_instances: 569
-    num_features: 30
+    max_num_clusters: 24
     num_clusters: 2
-- name: phoneme
-  loader: openml
+    num_features: 30
+    num_instances: 569
+  name: wdbc
+- loader: openml
   metadata:
     id: 1489
-    num_instances: 5404
-    num_features: 5
+    max_num_clusters: 74
     num_clusters: 2
-- name: qsar-biodeg
-  loader: openml
+    num_features: 5
+    num_instances: 5404
+  name: phoneme
+- loader: openml
   metadata:
     id: 1494
-    num_instances: 1055
-    num_features: 41
+    max_num_clusters: 33
     num_clusters: 2
-- name: wall-robot-navigation
-  loader: openml
+    num_features: 41
+    num_instances: 1055
+  name: qsar-biodeg
+- loader: openml
   metadata:
     id: 1497
-    num_instances: 5456
-    num_features: 24
+    max_num_clusters: 74
     num_clusters: 4
-- name: semeion
-  loader: openml
+    num_features: 24
+    num_instances: 5456
+  name: wall-robot-navigation
+- loader: openml
   metadata:
     id: 1501
-    num_instances: 1593
-    num_features: 256
+    max_num_clusters: 40
     num_clusters: 10
-- name: ilpd
-  loader: openml
+    num_features: 256
+    num_instances: 1593
+  name: semeion
+- loader: openml
   metadata:
     id: 1480
-    num_instances: 583
-    num_features: 10
+    max_num_clusters: 25
     num_clusters: 2
-- name: madelon
-  loader: openml
+    num_features: 10
+    num_instances: 583
+  name: ilpd
+- loader: openml
   metadata:
     id: 1485
-    num_instances: 2600
-    num_features: 500
+    max_num_clusters: 51
     num_clusters: 2
-- name: nomao
-  loader: openml
+    num_features: 500
+    num_instances: 2600
+  name: madelon
+- loader: openml
   metadata:
     id: 1486
-    num_instances: 34465
-    num_features: 118
+    max_num_clusters: 186
     num_clusters: 2
-- name: ozone-level-8hr
-  loader: openml
+    num_features: 118
+    num_instances: 34465
+  name: nomao
+- loader: openml
   metadata:
     id: 1487
-    num_instances: 2534
-    num_features: 72
+    max_num_clusters: 51
     num_clusters: 2
-- name: cnae-9
-  loader: openml
+    num_features: 72
+    num_instances: 2534
+  name: ozone-level-8hr
+- loader: openml
   metadata:
     id: 1468
-    num_instances: 1080
-    num_features: 856
+    max_num_clusters: 33
     num_clusters: 9
-- name: first-order-theorem-proving
-  loader: openml
+    num_features: 856
+    num_instances: 1080
+  name: cnae-9
+- loader: openml
   metadata:
     id: 1475
-    num_instances: 6118
-    num_features: 51
+    max_num_clusters: 79
     num_clusters: 6
-- name: banknote-authentication
-  loader: openml
+    num_features: 51
+    num_instances: 6118
+  name: first-order-theorem-proving
+- loader: openml
   metadata:
     id: 1462
-    num_instances: 1372
-    num_features: 4
+    max_num_clusters: 38
     num_clusters: 2
-- name: blood-transfusion-service-center
-  loader: openml
+    num_features: 4
+    num_instances: 1372
+  name: banknote-authentication
+- loader: openml
   metadata:
     id: 1464
-    num_instances: 748
-    num_features: 4
+    max_num_clusters: 28
     num_clusters: 2
-- name: PhishingWebsites
-  loader: openml
+    num_features: 4
+    num_instances: 748
+  name: blood-transfusion-service-center
+- loader: openml
   metadata:
     id: 4534
-    num_instances: 11055
-    num_features: 30
+    max_num_clusters: 106
     num_clusters: 2
-- name: bank-marketing
-  loader: openml
+    num_features: 30
+    num_instances: 11055
+  name: PhishingWebsites
+- loader: openml
   metadata:
     id: 1461
-    num_instances: 45211
-    num_features: 16
+    max_num_clusters: 213
     num_clusters: 2
-- name: GesturePhaseSegmentationProcessed
-  loader: openml
+    num_features: 16
+    num_instances: 45211
+  name: bank-marketing
+- loader: openml
   metadata:
     id: 4538
-    num_instances: 9873
-    num_features: 32
+    max_num_clusters: 100
     num_clusters: 5
-- name: har
-  loader: openml
+    num_features: 32
+    num_instances: 9873
+  name: GesturePhaseSegmentationProcessed
+- loader: openml
   metadata:
     id: 1478
-    num_instances: 10299
-    num_features: 561
+    max_num_clusters: 102
     num_clusters: 6
-- name: connect-4
-  loader: openml
-  metadata:
-    id: 40668
-    num_instances: 67557
-    num_features: 42
-    num_clusters: 3
-- name: steel-plates-fault
-  loader: openml
+    num_features: 561
+    num_instances: 10299
+  name: har
+- loader: openml
   metadata:
     id: 40982
-    num_instances: 1941
-    num_features: 27
+    max_num_clusters: 45
     num_clusters: 7
-- name: climate-model-simulation-crashes
-  loader: openml
+    num_features: 27
+    num_instances: 1941
+  name: steel-plates-fault
+- loader: openml
   metadata:
     id: 40994
-    num_instances: 540
-    num_features: 18
+    max_num_clusters: 24
     num_clusters: 2
-- name: wilt
-  loader: openml
+    num_features: 18
+    num_instances: 540
+  name: climate-model-simulation-crashes
+- loader: openml
   metadata:
     id: 40983
-    num_instances: 4839
-    num_features: 5
+    max_num_clusters: 70
     num_clusters: 2
-- name: car
-  loader: openml
+    num_features: 5
+    num_instances: 4839
+  name: wilt
+- loader: openml
   metadata:
     id: 40975
-    num_instances: 1728
-    num_features: 6
+    max_num_clusters: 42
     num_clusters: 4
-- name: segment
-  loader: openml
+    num_features: 6
+    num_instances: 1728
+  name: car
+- loader: openml
   metadata:
     id: 40984
-    num_instances: 2310
-    num_features: 16
+    max_num_clusters: 49
     num_clusters: 7
-- name: mfeat-pixel
-  loader: openml
+    num_features: 16
+    num_instances: 2310
+  name: segment
+- loader: openml
   metadata:
     id: 40979
-    num_instances: 2000
-    num_features: 240
+    max_num_clusters: 45
     num_clusters: 5
-- name: jungle_chess_2pcs_raw_endgame_complete
-  loader: openml
+    num_features: 240
+    num_instances: 2000
+  name: mfeat-pixel
+- loader: openml
   metadata:
     id: 41027
-    num_instances: 44819
+    max_num_clusters: 212
+    num_clusters: 5
     num_features: 6
-    num_clusters: 3
-- name: numerai28.6
-  loader: openml
-  metadata:
-    id: 23517
-    num_instances: 96320
-    num_features: 21
-    num_clusters: 2
-- name: Internet-Advertisements
-  loader: openml
+    num_instances: 44819
+  name: jungle_chess_2pcs_raw_endgame_complete
+- loader: openml
   metadata:
     id: 40978
-    num_instances: 3279
-    num_features: 1558
+    max_num_clusters: 58
     num_clusters: 2
-- name: dna
-  loader: openml
+    num_features: 1558
+    num_instances: 3279
+  name: Internet-Advertisements
+- loader: openml
   metadata:
     id: 40670
-    num_instances: 3186
-    num_features: 180
+    max_num_clusters: 57
     num_clusters: 3
-- name: churn
-  loader: openml
+    num_features: 180
+    num_instances: 3186
+  name: dna
+- loader: openml
   metadata:
     id: 40701
-    num_instances: 5000
-    num_features: 20
+    max_num_clusters: 71
     num_clusters: 2
+    num_features: 20
+    num_instances: 5000
+  name: churn
+name: generic

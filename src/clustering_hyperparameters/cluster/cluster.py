@@ -41,7 +41,7 @@ def setup(config):
     if to_normalize:
         dataset = normalize(dataset)    
 
-    model_name = config["model"]["name"]
+    model_name = config["model"]["base_model"]
     model_params = config["model"]["params"]
 
     model = ClusteringModel.by_name(model_name)(**model_params)

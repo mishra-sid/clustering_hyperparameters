@@ -1,103 +1,102 @@
-name: nlp
 cache_dir: ${root_dir}/data/nlp
 datasets:
-- name: AGNews-paraphrase-mpnet
-  loader: torchtext
+- loader: torchtext
   metadata:
-    tag: AG_NEWS
-    split: test
     encoder: sentence-transformer
     encoder_model: paraphrase-mpnet-base-v2
-    num_instances: 7600
-    num_features: 768   
+    max_num_clusters: 88
     num_clusters: 4
-
-- name: AGNews-stsb-distilroberta
-  loader: torchtext
-  metadata:
-    tag: AG_NEWS
+    num_features: 768
+    num_instances: 7600
     split: test
+    tag: AG_NEWS
+  name: AGNews-paraphrase-mpnet
+- loader: torchtext
+  metadata:
     encoder: sentence-transformer
     encoder_model: stsb-distilroberta-base-v2
-    num_instances: 7600
-    num_features: 768   
+    max_num_clusters: 88
     num_clusters: 4
-
-- name: AGNews-glove
-  loader: torchtext
-  metadata:
-    tag: AG_NEWS
+    num_features: 768
+    num_instances: 7600
     split: test
+    tag: AG_NEWS
+  name: AGNews-stsb-distilroberta
+- loader: torchtext
+  metadata:
     encoder: sentence-transformer
     encoder_model: average_word_embeddings_glove.6B.300d
-    num_instances: 7600
-    num_features: 300   
+    max_num_clusters: 88
     num_clusters: 4
-
-- name: DBpedia-paraphrase-mpnet
-  loader: torchtext
-  metadata:
-    tag: DBpedia
+    num_features: 300
+    num_instances: 7600
     split: test
+    tag: AG_NEWS
+  name: AGNews-glove
+- loader: torchtext
+  metadata:
     encoder: sentence-transformer
     encoder_model: paraphrase-mpnet-base-v2
-    num_instances: 70000
-    num_features: 768   
+    max_num_clusters: 265
     num_clusters: 14
-
-- name: DBpedia-stsb-distilroberta
-  loader: torchtext
-  metadata:
-    tag: DBpedia
+    num_features: 768
+    num_instances: 70000
     split: test
+    tag: DBpedia
+  name: DBpedia-paraphrase-mpnet
+- loader: torchtext
+  metadata:
     encoder: sentence-transformer
     encoder_model: stsb-distilroberta-base-v2
-    num_instances: 70000
-    num_features: 384   
+    max_num_clusters: 265
     num_clusters: 14
-
-- name: DBpedia-glove
-  loader: torchtext
-  metadata:
-    tag: DBpedia
+    num_features: 384
+    num_instances: 70000
     split: test
+    tag: DBpedia
+  name: DBpedia-stsb-distilroberta
+- loader: torchtext
+  metadata:
     encoder: sentence-transformer
     encoder_model: average_word_embeddings_glove.6B.300d
-    num_instances: 70000
-    num_features: 300   
+    max_num_clusters: 265
     num_clusters: 14
-
-- name: YahooAnswers-paraphrase-mpnet
-  loader: torchtext
-  metadata:
-    tag: YahooAnswers
+    num_features: 300
+    num_instances: 70000
     split: test
+    tag: DBpedia
+  name: DBpedia-glove
+- loader: torchtext
+  metadata:
     encoder: sentence-transformer
     encoder_model: paraphrase-mpnet-base-v2
-    num_instances: 60000
-    num_features: 768   
+    max_num_clusters: 245
     num_clusters: 10
-
-
-- name: YahooAnswers-stsb-distilroberta
-  loader: torchtext
-  metadata:
-    tag: YahooAnswers
+    num_features: 768
+    num_instances: 60000
     split: test
+    tag: YahooAnswers
+  name: YahooAnswers-paraphrase-mpnet
+- loader: torchtext
+  metadata:
     encoder: sentence-transformer
     encoder_model: stsb-distilroberta-base-v2
-    num_instances: 60000
-    num_features: 768   
+    max_num_clusters: 245
     num_clusters: 10
-
-- name: YahooAnswers-glove
-  loader: torchtext
-  metadata:
-    tag: YahooAnswers
+    num_features: 768
+    num_instances: 60000
     split: test
+    tag: YahooAnswers
+  name: YahooAnswers-stsb-distilroberta
+- loader: torchtext
+  metadata:
     encoder: sentence-transformer
     encoder_model: average_word_embeddings_glove.6B.300d
-    num_instances: 60000
-    num_features: 300   
+    max_num_clusters: 245
     num_clusters: 10
-
+    num_features: 300
+    num_instances: 60000
+    split: test
+    tag: YahooAnswers
+  name: YahooAnswers-glove
+name: nlp

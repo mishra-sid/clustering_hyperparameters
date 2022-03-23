@@ -1,4 +1,5 @@
 name: optics
+base_model: optics
 params:
   - name: min_samples
     type: range

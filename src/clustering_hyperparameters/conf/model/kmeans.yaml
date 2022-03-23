@@ -1,4 +1,5 @@
 name: kmeans
+base_model: kmeans
 params:
   - name: random_state
     type: fixed

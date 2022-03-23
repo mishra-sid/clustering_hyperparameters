@@ -1,4 +1,4 @@
-name: hac
+name: hac-with_clusters
 base_model: hac
 params:
   - name: criterion
@@ -6,9 +6,9 @@ params:
     value_type: str
     value: maxclust
   - name: t
-    type: fixed
+    type: range
     value_type: int
-    value: ${suite.datasets.${dataset_index}.metadata.num_clusters}
+    bounds: [2, '${suite.datasets.${dataset_index}.metadata.max_num_clusters}']
   - name: method
     type: choice
     value_type: str  

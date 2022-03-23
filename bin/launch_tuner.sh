@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 set -exu
-threads=${1:-8}
-num_cpus=${2:-80}
-mem=${3:-100000}
-num_datasets=$4
-num_rounds=$5
+threads=12
+num_cpus=60
+mem=80000
+num_datasets=$1
+num_rounds=5
 
 total_exps=$((num_datasets * num_rounds - 1))
 
@@ -31,4 +31,4 @@ sbatch -J $job_name \
             --ntasks=1 \
             --mem=$mem \
             --array=0-$total_exps \
-            bin/run_tuner.sh $threads $num_datasets "${@:6}"
+            bin/run_tuner.sh $threads $num_datasets "${@:2}"

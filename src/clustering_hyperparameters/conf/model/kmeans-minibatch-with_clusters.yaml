@@ -1,4 +1,4 @@
-name: kmeans-minibatch
+name: kmeans-minibatch-with_clusters
 base_model: kmeans-minibatch
 params:
   - name: random_state
@@ -11,9 +11,9 @@ params:
     bounds: [1, 1024]
     log_scale: True
   - name: n_clusters
-    type: fixed
+    type: range
     value_type: int
-    value: ${suite.datasets.${dataset_index}.metadata.num_clusters}
+    bounds: [2, '${suite.datasets.${dataset_index}.metadata.max_num_clusters}']
   - name: max_iter
     type: range
     value_type: int
