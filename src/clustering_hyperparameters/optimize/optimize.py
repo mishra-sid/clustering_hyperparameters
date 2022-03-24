@@ -16,7 +16,6 @@ from omegaconf import OmegaConf
 import torch
 import pandas as pd
 
-DEFAULT_BAYESIAN_PARALLELISM = 5
 
 def evaluation_metric_function(parameterization, config):
     """[Finds evaluation metric for a model given it's parameters and global config]
@@ -62,7 +61,7 @@ def optimize(config):
          gen_steps.append(GenerationStep(
                 model=Models.BOTORCH,
                 num_trials=num_bayes_trials,
-                max_parallelism=DEFAULT_BAYESIAN_PARALLELISM))
+                max_parallelism=config["optim"]["compute"]["max_concurrent"]))
     
     gen_strat = GenerationStrategy(
         steps=gen_steps
@@ -88,12 +87,18 @@ def optimize(config):
                                                                                 "homogeneity_completeness_v_measure"]])
     out_csv_path = Path(output_dir) / (exp_name + ".csv" )
     if to_attach:
+       out_bayes_path = Path(output_dir) / (exp_name + "_bayesian.csv" ) 
+       
+       if out_bayes_path.exists():
+           return
+
        num_trials_to_attach = config["optim"]["num_trials_to_attach"]
        trials_df_existing = pd.read_csv(out_csv_path)
        for ind, row in trials_df_existing.head(num_trials_to_attach).iterrows():
            param_cols=[x for x in trials_df_existing.columns if x not in ["adjusted_rand_score", 
                                                                           "trial_status",
                                                                           "generator_model",
+                                                                          "generation_method",
                                                                           "trial_index",
                                                                           "arm_name",
                                                                           "compute_time"]]
@@ -130,5 +135,5 @@ def optimize(config):
     compute_time_col = { index: (trial.time_completed - trial.time_run_started).total_seconds() for index, trial in ax_client.experiment.trials.items() }
     trials_df['compute_time'] = [ compute_time_col[trial_index] for trial_index in trials_df.trial_index ]
 
-    trials_df.to_csv(output_dir + "/" + exp_name + ".csv", encoding='utf-8', index=False)
+    trials_df.to_csv(output_dir + "/" + exp_name + "_bayesian.csv", encoding='utf-8', index=False)
 

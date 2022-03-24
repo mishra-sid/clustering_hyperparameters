@@ -8,7 +8,7 @@ defaults:
 dataset_index: 0
 
 # If enabled, fetches the dataset before evaluation  
-fetch_suite: True
+fetch_suite: False
 
 # If enabled, L2 normalizes the dataset
 normalize: True
@@ -34,13 +34,13 @@ optim:
   run_index: 0
 
   # Attach existing trials from random evals
-  attach_from_existing_trials: False
-  num_trials_to_attach: 0
+  attach_from_existing_trials: True
+  num_trials_to_attach: 10
 
 
   # Number of random and bayesian trials to run
-  num_random_trials: 50
-  num_bayes_trials: 0
+  num_random_trials: 0
+  num_bayes_trials: 50
 
   # Number of episodes to run 
   num_episodes: 5

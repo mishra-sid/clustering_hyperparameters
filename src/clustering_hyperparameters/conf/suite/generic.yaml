@@ -404,7 +404,7 @@ datasets:
   metadata:
     id: 41027
     max_num_clusters: 212
-    num_clusters: 5
+    num_clusters: 3
     num_features: 6
     num_instances: 44819
   name: jungle_chess_2pcs_raw_endgame_complete
