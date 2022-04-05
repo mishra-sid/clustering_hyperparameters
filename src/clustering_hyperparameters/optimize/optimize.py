@@ -135,5 +135,5 @@ def optimize(config):
     compute_time_col = { index: (trial.time_completed - trial.time_run_started).total_seconds() for index, trial in ax_client.experiment.trials.items() }
     trials_df['compute_time'] = [ compute_time_col[trial_index] for trial_index in trials_df.trial_index ]
 
-    trials_df.to_csv(output_dir + "/" + exp_name + "_bayesian.csv", encoding='utf-8', index=False)
+    trials_df.to_csv(output_dir + "/" + exp_name + ".csv", encoding='utf-8', index=False)
 
