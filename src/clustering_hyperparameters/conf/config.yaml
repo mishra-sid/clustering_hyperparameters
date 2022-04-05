@@ -34,13 +34,13 @@ optim:
   run_index: 0
 
   # Attach existing trials from random evals
-  attach_from_existing_trials: True
-  num_trials_to_attach: 10
+  attach_from_existing_trials: False
+  num_trials_to_attach: 0
 
 
   # Number of random and bayesian trials to run
-  num_random_trials: 0
-  num_bayes_trials: 50
+  num_random_trials: 25
+  num_bayes_trials: 25
 
   # Number of episodes to run 
   num_episodes: 5
