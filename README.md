@@ -141,3 +141,17 @@ For ease of tweaking, the evaluated outputs described in the paper are provided 
 To reproduce the results:
 1. Extract `output.zip` to `output/`
 2. Go to any jupyter notebook in [experiments](experiments) folder and run the notebook to get the corresponding plots.
+3. 
+
+## Citation
+```
+@inproceedings{mishra2022evaluative,
+  title={An evaluative measure of clustering methods incorporating hyperparameter sensitivity},
+  author={Mishra, Siddhartha and Monath, Nicholas and Boratko, Michael and Kobren, Ariel and McCallum, Andrew},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={36},
+  number={7},
+  pages={7788--7796},
+  year={2022}
+}
+```
