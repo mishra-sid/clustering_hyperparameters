@@ -141,7 +141,6 @@ For ease of tweaking, the evaluated outputs described in the paper are provided 
 To reproduce the results:
 1. Extract `output.zip` to `output/`
 2. Go to any jupyter notebook in [experiments](experiments) folder and run the notebook to get the corresponding plots.
-3. 
 
 ## Citation
 ```
